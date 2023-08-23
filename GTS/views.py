@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.db.models import Count
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
@@ -48,6 +49,7 @@ def get_pub(request, pubId):  # Notice the parameter name change
 
 
 @api_view(['POST'])
+@csrf_exempt
 @permission_classes([IsAuthenticated])
 def join_pub(request):
     data = json.loads(request.body)
@@ -73,6 +75,7 @@ def remove_text(text):
 
 
 @api_view(['POST'])
+@csrf_exempt
 @permission_classes([IsAuthenticated])
 def remove_pub(request):
     data = json.loads(request.body)
@@ -86,6 +89,7 @@ def remove_pub(request):
 
 
 @api_view(['POST'])
+@csrf_exempt
 @permission_classes([IsAuthenticated])
 def create_pub(request):
     data = json.loads(request.body)
@@ -145,6 +149,7 @@ def create_pub(request):
 
 
 @api_view(['POST'])
+@csrf_exempt
 def create_user(request):
     data = json.loads(request.body)
     username = data.get("username")
@@ -159,6 +164,7 @@ def create_user(request):
 
 
 @api_view(['POST'])
+@csrf_exempt
 def login_view(request):
     if request.method == 'POST':
         data = json.loads(request.body)
