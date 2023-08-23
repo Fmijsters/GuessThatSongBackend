@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-&y=&7@h74i0a($yxu6j@p5l&2^spir2w67n+b2!c9z9k3y2h%v
 DEBUG = True
 
 ALLOWED_HOSTS = ["192.168.0.104", 'localhost', "guessthatsongbackend-fmijsters.b4a.run",
-                 "guessthatsongfrontend-fmijsters.b4a.run"]
+                 "guessthatsongfrontend-fmijsters.b4a.run","node36a.containers.back4app.com"]
 
 # Application definition
 
@@ -74,7 +74,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://192.168.0.104:3000",
     "https://guessthatsongbackend-fmijsters.b4a.run",
-    "https://guessthatsongfrontend-fmijsters.b4a.run"]
+    "https://guessthatsongfrontend-fmijsters.b4a.run"   ]
 
 TEMPLATES = [
     {
