@@ -25,6 +25,7 @@ SECRET_KEY = "django-insecure-&y=&7@h74i0a($yxu6j@p5l&2^spir2w67n+b2!c9z9k3y2h%v
 DEBUG = True
 
 ALLOWED_HOSTS = ["192.168.0.104", 'localhost', "guessthatsongbackend-fmijsters.b4a.run",
+                 "node38a.containers.back4app.com",
                  "guessthatsongfrontend-fmijsters.b4a.run", "node36a.containers.back4app.com"]
 
 # Application definition
